@@ -1,0 +1,10 @@
+#draggable {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    position: fixed;
+    cursor: move;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 100px;
+}
