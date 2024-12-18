@@ -1,24 +1,16 @@
-type Admin = {
-    name: string
-    privilege: string[]
+const names: Array<string> = []
+
+const promise: Promise<string> = new Promise((resolve, reject) => {
+    resolve('This is done!')
+    // resolve(12)
+})
+
+promise.then(data => data.split(' '))
+
+function merge<T extends object, U extends object>(objA: T, objB: U) {
+    const target = {}
+    return Object.assign(target, objA, objB)
 }
 
-type Employee = {
-    name: string
-    startDate: Date
-}
-
-type ElevatedEmployee = Admin & Employee
-
-const e1: ElevatedEmployee = {
-    name: '',
-    privilege: [''],
-    startDate: new Date()
-}
-
-type Combinable = number | string
-type Numeric = number | boolean
-
-type Universal = Combinable & Numeric
-
-const universal: Universal = 0
+const mergeObj = merge({ name: 'tien' }, { age: 12 })
+console.log(mergeObj);
