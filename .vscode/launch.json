@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/home/tien/Desktop/TS_learning/index.html"
+            "file": "/home/tien/TS_learning/index.html"
         }
     ]
 }
