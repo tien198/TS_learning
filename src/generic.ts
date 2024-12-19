@@ -11,8 +11,13 @@ function merge<T extends object, U extends object>(objA: T, objB: U) {
     const target = {}
     return Object.assign(target, objA, objB)
 }
-
-const mergeObj = merge({ name: 'tien' }, { age: 12 })
+interface Name {
+    name: string
+}
+interface Age {
+    age: number
+}
+const mergeObj = merge<Name, Age>({ name: 'tien' }, { age: 12 })
 console.log(mergeObj);
 
 interface CourseGoal {
